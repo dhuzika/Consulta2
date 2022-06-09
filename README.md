@@ -19,6 +19,8 @@ associado ao conceito de herança e é representado com o nome e argumentos do
 método iguais. A subclasse redefine o método da superclasse e a decisão do método
 a ser chamado é tomada em tempo de execução. 
 
+Um objeto é um elemento computacional que representa, no domínio da solução, alguma entidade (abstrata ou concreta) do domínio de interesse do problema sob análise. Objetos similares são agrupados em classes. No paradigma de orientação a objetos, tudo pode ser potencialmente representado como um objeto.
+
 Correto:
 Um objeto eh uma construcao de sogtware que encapsula estado e comportamento
 Uma classe define os atributos e comportamentos compartilhados por um tipo de objeto
@@ -629,6 +631,140 @@ protected pode ser acessado somente de dentro da própria classe ou de classes q
 private pode ser acessado somente de dentro da própria classe.
 
 static pode ser acessado a partir de qualquer classe da aplicação.
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+public class Aluno extends Pessoa {
+
+    private String ra;
+    private double nota;
+
+
+    public Aluno(String ra, double nota) {
+        setRa(ra);
+        setNota(nota);
+    }
+
+    public Aluno(String nome, int idade, double peso, double altura, String ra, double nota) {
+        super(nome, idade, peso, altura);
+        setRa(ra);
+        setNota(nota);
+    }
+
+
+    public String getRa() {
+        return ra;
+    }
+
+    public void setRa(String ra) {
+        this.ra = ra;
+    }
+
+    public double getNota() {
+        return nota;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+}
+
+
+
+
+
+public class Pessoa {
+    private int idade;
+    private String nome;
+    private double altura;
+    private double peso;
+
+
+    public Pessoa(String nome, int idade, double altura, double peso) {
+        setNome(nome);
+        setIdade(idade);
+        setAltura(altura);
+        setPeso(peso);
+        System.out.println("Construindo...")
+    }
+
+    @Override
+    public String toString(){
+        return "Nome: " + this.nome + "\nIdade: " + this.idade + "\nAltura: " + this.altura + "\nPeso: " + this.peso;
+    }
+
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+}
+
+
+
+
+public class Teste {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("Eduardo", 18, 1.77, 71.0);
+        pessoa.toString();
+    }
+}
+
 
 
 
