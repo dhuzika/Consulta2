@@ -1,4 +1,268 @@
 # Consulta2
+P1:
+1)
+import javax.swing.JOptionPane;
+class Main{
+ public static void main(String[]args){
+    int idade;
+    JOptionPane.showInputDialog("Sua idade");
+    JOptionPane.showMessageDialog(null,idade);
+}
+}
+Compila e executa. Se o usuário digitar 15, exibirá 15.
+A linha 4 causa um erro em tempo de compilação. **CORRETA**
+A linha 5 causa um erro em tempo de compilação.
+O programa compila e somente causa uma exceção em tempo de execução se o usuário digitar um valor não numérico.
+O programa compila e executa sem causar erros em quaisquer circunstâncias.
+
+2)
+class Main{
+  public static void main(String[]args){
+    int op=2;
+    if(op ==3)
+      System.out.print("D");
+      System.out.print("A");
+    else
+      System.out.print("E");
+}
+ }
+ Nao compila **CORRETA**
+ 
+ 3)
+ import javax.swing.JOptionPane;
+class Main{
+}
+ public static void main(String[]args){
+    int idade=18;
+    String podeDirigir=18<=idade?"Sim":"Não";
+   System.out.println(podeDirigir);
+ }
+ }
+ 
+ Compila e Executa. Exibe Sim. **CORRETA**
+ 
+ 4)
+ class Main{
+ public static void main(String[]args){
+    int op=2;
+    switch(op){
+      case1:
+        System.out.print("A");
+      case2:
+        System.out.print("B");
+      default:
+        System.out.print("E");
+      case3:
+        System.out.print("C");
+        break;
+      case4:
+        System.out.print("D");
+}
+}
+}
+
+Compila e executa. Exibe BEC.
+
+5)
+class Main{
+  public static void main(String[]args){
+    for(;;);
+  }
+}
+
+Compila e executa. Causa loop infinito. **CORRETA**
+
+6)
+import javax.swing.JOptionPane;
+class Main{
+ public static void main(String[]args){
+}
+ }
+   while(true);
+      for(inti=0;i<2;i++){
+        System.out.print(i);
+      }
+}
+}
+
+Nao compila **CORRETA**
+
+7)
+
+
+P2:
+1)
+Inspirado pelas definições de classes e objetos, analise as seguintes proposições. 
+
+I. Uma vez que tenhamos definido uma classe, múltiplos objetos podem ser construídos a partir dela. 
+II. Para que a definição de uma classe possa ser realizada, é necessário que um objeto tenha sido construído previamente.
+III. Dentre os membros que uma classe pode definir, estão os métodos e os atributos. 
+
+É correto apenas o que se afirma em
+
+I
+II
+III
+I e II
+I e III **CORRETA**
+
+2)
+O desenvolvimento de software envolve diversos princípios. No contexto da orientação a objetos e, especialmente quando criamos classes, dois deles se chamam alta coesão e baixo acoplamento. Diante do exposto, considere as seguintes proposições. 
+
+I. Classes altamente coesas são aquelas que encapsulam todas as suas variáveis de instância. 
+II. Quando uma classe tem mais de uma razão de ser, ou seja, mais de um propósito, dizemos que ela viola o princípio da alta coesão. 
+III. Se duas classes têm baixo acoplamento entre si, ambas são imediatamente altamente coesas. 
+É correto apenas o que se afirma em
+
+I
+II **CORRETA**
+III
+I e II
+II e III
+
+3)
+Qual a alternativa correta?
+Objetos e primitivos devem ser manipulados por variáveis de referência.
+Um único objeto pode ser referenciado por mais de uma variável de referência. **CORRETA**
+Uma única variável de referência pode referenciar, simultaneamente, mais de um objeto.
+Um objeto que não possui variável de referência alguma que faça referência a ele é imediatamente coletado pelo Garbage Collector.
+Todos os objetos e primitivos vivem na memória "heap".
+
+4)
+public class Pessoa(
+    private int idade;
+    private String nome;
+}
+    public void andar(){
+        System.out.println(nome+"andando ...");
+   }
+public class TestePessoa{
+    public static void main(String[]args){
+        Pessoap=new Pessoa();
+        p.andar();
+}
+
+I. A linha 6 causa um erro de compilação, já que a variável nome é private e o método é public. 
+II. Utilizando a variável de referência p, a classe TestePessoa pode acessar idade, nome e o método andar definidos na classe Pessoa. 
+III. O método andar pode ser acessado por qualquer classe. É correto apenas o que se afirma em **CORRETA**
+
+5)
+Qual a alternativa correta?
+Métodos getters são aqueles que permitem a obtenção de valores armazenados em variáveis marcadas como private. **CORRETA**
+Métodos setters são aqueles que permitem a obtenção de valores armazenados em variáveis marcadas como private.
+Métodos getters e setters são aqueles que permitem a obtenção de valores armazenados em variáveis marcadas como private.
+Se uma varíável de instância é marcada como private, o programador deve obrigatoriamente definir seus métodos getters/setters.
+Todas as variáveis de instância devem ter métodos de acesso e modificadores associados a elas.
+
+6)
+Analise as seguintes proposições. 
+I. A sobrecarga de métodos é caracterizada quando uma classe define dois ou mais métodos com nomes iguais. 
+II. Dois métodos que possuem nomes iguais somente podem pertencer à mesma classe caso tenham tipo de retorno diferentes. 
+III. Dois métodos de nomes iguais e que pertencem à mesma classe são considerados diferentes pelo compilador quando a sua lista de parâmetros difere no número de parâmetros especificados. 
+É correto apenas o que se afirma em
+
+I
+II
+III
+I e III **CORRETA**
+II e III
+
+7)
+public class Calculadora{
+    public double multiplicar(inta,intb){
+        returna*b;
+   }
+    public double multiplicar(inta,intb,intc){
+        return multiplicar(multiplicar(a,b),c);
+    }
+}
+
+I. Embora tenham nomes iguais, o compilador Java considera que são diferentes os dois métodos da classe Calculadora. 
+II. Há um erro em tempo de compilação na linha 7. 
+III. Ambos os métodos causam erros de compilação, já que seu tipo de retorno é double e ambos recebem parâmetros de tipo int. É correto apenas o que se afirma em
+
+I
+II
+III
+I e II **CORRETA**
+II e III
+
+8)
+public class Veiculo{
+    private String placa;
+    private String modelo;
+}
+    public Veiculo(String placa){
+        this placa placa;
+    }
+    public Veiculo(String placa,String modelo){
+        this(placa);
+        this modelo=modelo;
+   }
+}
+
+I. A classe Veiculo possui o construtor padrão. 
+II. A linha 10 causa a execução do construtor definido entre as linhas 5 e 7. 
+III. As atribuições das linhas 6 e 11 podem ocorrer normalmente, ainda que as variáveis de instância sejam private. É correto apenas o que se afirma em
+I
+II
+III
+I e II
+II e III **CORRETA**
+
+9)
+classA{
+   A(){
+   }
+        System.out.print("A");
+classBextendsA{
+   B(){
+        System.out.print("B");
+classCextendsB{
+   C(){
+        super();
+        System.out.print("C");
+public class Teste{
+   public static void main(String[]args){
+        Aa=newA();
+        Bb=newB();
+        Cc=newC();
+   }
+}
+
+Exibe ABC
+Exibe AABABC **CORRETA**
+Exibe AABBCC
+Erro em tempo de compilação na linha 15.
+Exceção em tempo de execução.
+
+10)
+class Animal{
+    private String nome;
+    Animal(String nome){
+        this.nome=nome;
+        System.out.print("Animal");
+}
+    }
+0
+class Gato extends Animal{
+    Gato(){
+    }
+        System.out.print("Gato");
+public class HerancaAnimal{
+    public static void main(String[]args){
+        Animala=new Animal("Bob");
+        Gatog=new Gato();
+   }
+}
+
+Exibe AnimalGato
+Exibe BobAnimalGato
+Exibe AnimalAnimalGato
+Erro em tempo de compilação **CORRETA**
+Exceção em tempo de execução
+------------------------------------------------
+
 POO:
 C - CONFIAVEL
 O - OPORTUNO
